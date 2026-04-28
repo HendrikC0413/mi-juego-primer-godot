@@ -51,9 +51,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
+offset_left = -96.0
+offset_top = -232.0
+offset_right = 104.0
+offset_bottom = -132.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_icnks")
@@ -65,4 +66,14 @@ text = "Inicio"
 wait_time = 2.0
 one_shot = true
 
+[node name="CloseButton" type="Button" parent="." unique_id=1294463027]
+offset_left = 160.0
+offset_top = 600.0
+offset_right = 316.0
+offset_bottom = 686.0
+theme_override_fonts/font = ExtResource("2_icnks")
+theme_override_font_sizes/font_size = 64
+text = "Salir"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

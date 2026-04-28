@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bpl2ar6vxhtq4" path="res://Scenas/hud.tscn" id="4_an1xy"]
 [ext_resource type="AudioStream" uid="uid://co2mpwu8t21b7" path="res://art/House In a Forest Loop.ogg" id="5_s1m4t"]
 [ext_resource type="AudioStream" uid="uid://doo2nvfmjf11a" path="res://art/gameover.wav" id="6_gug6g"]
+[ext_resource type="PackedScene" uid="uid://be8hyvy56cmen" path="res://Scenas/bullet.tscn" id="7_gug6g"]
 
 [sub_resource type="Curve2D" id="Curve2D_ue5qb"]
 _data = {
@@ -53,6 +54,8 @@ parameters/looping = true
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=1256654340]
 stream = ExtResource("6_gug6g")
+
+[node name="Bullet" parent="." unique_id=223921296 instance=ExtResource("7_gug6g")]
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
